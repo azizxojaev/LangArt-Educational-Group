@@ -76,7 +76,7 @@
 		<div class="row header-top">
 			<div class="col-xxl-6 col-xl-8 col-lg-8">
 				<div class="header-top-welcome">
-					<p><img src="assets/images/home-one/top-star.png" alt="star">Welcome to <a href="index.html">Educate</a>– Unlocking the Power of Education!</p>
+					<p><img src="assets/images/home-one/top-star.png" alt="star">Welcome to <a href="{% url 'home' %}">Educate</a>– Unlocking the Power of Education!</p>
 				</div>
 			</div>
 			<div class="col-xxl-6 col-xl-4 col-lg-4">
@@ -102,13 +102,13 @@
 <!--==================================================-->
 <!-- Start educate Header Area-->
 <!--==================================================-->
-<div class="educate-header-area upper" id="sticky-header" >
+<div class="educate-header-area" id="sticky-header" >
 	<div class="container-fluid">
 		<div class="row header-wrap align-items-center">
 			<div class="col-lg-2">
 				<div class="header-logo">
-					<a class="active_logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-					<a class="logo_two" href="index.html"><img src="assets/images/footer-logo.png" alt="logo"></a>
+					<a class="active_logo" href="{% url 'home' %}"><img src="assets/images/logo.png" alt="logo"></a>
+					<a class="logo_two" href="{% url 'home' %}"><img src="assets/images/footer-logo.png" alt="logo"></a>
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -116,36 +116,36 @@
 					<ul class="nav_scroll">
 						<li><a href="#">Home<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="index.html">Home Version 01</a></li>
-								<li><a href="index-2.html">Home Version 02</a></li>
-								<li><a href="index-3.html">Home Version 03</a></li>
-								<li><a href="index-4.html">Home Version 04</a></li>
-								<li><a href="index-5.html">Home Version 05</a></li>
-								<li><a href="index-6.html">Home Version 06</a></li>
+								<li><a href="{% url 'home' %}">Home Version 01</a></li>
+								<li><a href="{% url 'home2' %}">Home Version 02</a></li>
+								<li><a href="{% url 'home3' %}">Home Version 03</a></li>
+								<li><a href="{% url 'home4' %}">Home Version 04</a></li>
+								<li><a href="{% url 'home5' %}">Home Version 05</a></li>
+								<li><a href="{% url 'home6' %}">Home Version 06</a></li>
 							</ul>
 						</li>
-						<li><a href="about.html">about</a></li>
+						<li><a href="{% url 'about' %}">about</a></li>
 						<li><a href="#">pages<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="course.html">Courses</a></li>
-								<li><a href="course-details.html">Courses Details</a></li>
-								<li><a href="instructor.html">Instructor</a></li>						
-								<li><a href="instructor-details.html">Instructor Details</a></li>
+								<li><a href="{% url 'about' %}">About Us</a></li>
+								<li><a href="{% url 'courses' %}">Courses</a></li>
+								<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
+								<li><a href="{% url 'instructors' %}">Instructor</a></li>						
+								<li><a href="{% url 'instructor-detail' %}">Instructor Details</a></li>
 								<li><a href="event.html">Event</a></li>	
 								<li><a href="event-details.html">Event Details</a></li>	
-								<li><a href="pricing.html">Pricing</a></li>	
+								<li><a href="{% url 'pricing' %}">Pricing</a></li>	
 								<li><a href="faq.html">Faq</a></li>	
 								<li><a href="choose.html">Why Choose</a></li>
 								<li><a href="testimonial.html">testimonial</a></li>	
 								<li><a href="404.html">Error Page</a></li>							
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
 							</ul>
 						</li>
 						<li><a href="#">courses<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="course.html">Courses</a></li>
-								<li><a href="course-details.html">Courses Details</a></li>
+								<li><a href="{% url 'courses' %}">Courses</a></li>
+								<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Shop<i class="bi bi-chevron-down"></i></a>
@@ -162,7 +162,7 @@
 								<li><a href="blog-details.html">Blog Details</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>					
 				</div>
 			</div>
@@ -177,7 +177,7 @@
 							<small class="cart_counter">0</small>
 						</button>
 						<div class="header-btn">
-							<a href="contact.html">Free Trial<i class="flaticon flaticon-right-arrow"></i></a>
+							<a href="{% url 'contact' %}">Free Trial<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
 						<div class="header-sidbar-button navSidebar-button">
 							<a href="#"><i class="bi bi-justify-left"></i></a>
@@ -198,43 +198,43 @@
 	<div class="mobile-menu">
 		<nav class="header-menu">
 			<div class="mobile-logo">
-				<a class="logo_img" href="index.html" title="educate">
+				<a class="logo_img" href="{% url 'home' %}" title="educate">
 				    <img src="assets/images/footer-logo.png" alt="logo">
 				</a>
 			  </div>
 			  <ul class="nav_scroll">
 				<li><a href="#">Home<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="index.html">Home Version 01</a></li>
-						<li><a href="index-2.html">Home Version 02</a></li>
-						<li><a href="index-3.html">Home Version 03</a></li>
-						<li><a href="index-4.html">Home Version 04</a></li>
-						<li><a href="index-5.html">Home Version 05</a></li>
-						<li><a href="index-6.html">Home Version 06</a></li>
+						<li><a href="{% url 'home' %}">Home Version 01</a></li>
+						<li><a href="{% url 'home2' %}">Home Version 02</a></li>
+						<li><a href="{% url 'home3' %}">Home Version 03</a></li>
+						<li><a href="{% url 'home4' %}">Home Version 04</a></li>
+						<li><a href="{% url 'home5' %}">Home Version 05</a></li>
+						<li><a href="{% url 'home6' %}">Home Version 06</a></li>
 					</ul>
 				</li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="{% url 'about' %}">about</a></li>
 				<li><a href="#">pages<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="course.html">Courses</a></li>
-						<li><a href="course-details.html">Courses Details</a></li>
-						<li><a href="instructor.html">Instructor</a></li>						
-						<li><a href="instructor-details.html">Instructor Details</a></li>
+						<li><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'courses' %}">Courses</a></li>
+						<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
+						<li><a href="{% url 'instructors' %}">Instructor</a></li>						
+						<li><a href="{% url 'instructor-detail' %}">Instructor Details</a></li>
 						<li><a href="event.html">Event</a></li>	
 						<li><a href="event-details.html">Event Details</a></li>	
-						<li><a href="pricing.html">Pricing</a></li>	
+						<li><a href="{% url 'pricing' %}">Pricing</a></li>	
 						<li><a href="faq.html">Faq</a></li>	
 						<li><a href="choose.html">Why Choose</a></li>
 						<li><a href="testimonial.html">testimonial</a></li>	
 						<li><a href="404.html">Error Page</a></li>							
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>
 				</li>
 				<li><a href="#">courses<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="course.html">Courses</a></li>
-						<li><a href="course-details.html">Courses Details</a></li>
+						<li><a href="{% url 'courses' %}">Courses</a></li>
+						<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Shop<i class="bi bi-chevron-down"></i></a>
@@ -251,8 +251,8 @@
 						<li><a href="blog-details.html">Blog Details</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>			
+				<li><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>	
 		</nav>
 	</div>
 </div>
@@ -377,7 +377,7 @@
 				<div class="sidebar-info-contents">
 					<div class="content-inner">
 						<div class="nav-logo">
-							<a href="index.html"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
+							<a href="{% url 'home' %}"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
 						</div>
 						<div class="content-box">
 							<h2>About Us</h2>
@@ -417,76 +417,254 @@
 
 
 <!--==================================================-->
-<!-- Start educate sign in form area -->
+<!-- Start educate Breadcumb Area -->
 <!--==================================================-->
-<section class="course-sign-form-area">
+<div class="breadcumb-area d-flex">
 	<div class="container">
-		<div class="row">
-			<div class="col-xl-6 col-lg-6">
-				<div class="course-sign-in">
-					<div class="sign-form">
-						<div class="bd-section-title-wrapper">
-							<h2 class="sign-form-title">Welcome Back!</h2>
-							<p class="sign-desc">Sign in to continue your journey and unlock a world of
-								opportunities.</p>
-						</div>
+		<div class="row align-items-center">
+			<div class="col-lg-12">
+				<div class="breadcumb-content">
+					<div class="breadcumb-title">
+						<h4>Why Choose</h4>
+					</div>
+					<ul>
+						<li><a href="{% url 'home' %}">Home <span><i class="fa-solid fa-arrow-right-long"></i></span></a></li>
+						<li>Why Choose</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="breadcumb-shape">
+			<img src="assets/images/inner-img/breadcumb-dot.png" alt="dot">
+		</div>
+		<div class="breadcumb-shape2">
+			<img src="assets/images/inner-img/breadcumb-ball.png" alt="ball">
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End educate Breadcumb Area -->
+<!--==================================================-->
+
+
+
+
+<!--==================================================-->
+<!-- Start educate why choose Area -->
+<!--==================================================-->
+<div class="why-choose-area style-one">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-7">
+				<div class="choose-content">
+					<!-- section title -->
+					<div class="section-sub-title">
+						<h6>why choose us?</h6>
+					</div>
+					<div class="section_title">
+						<h1>Innovative and effective</h1>
+						<h1>learning approaches</h1>
+					</div>
+					<div class="section-title-desc">
+						<p>Educate the ultimate destination for knowledge seekers and educators alike. 
+							We are committed to transforming special education impact global channels 
+							without standards compliant systems</p>
+					</div>
+					<div class="choose-item-menu">
+						<ul>
+							<li><img src="assets/images/home-one/choose-icon1.png" alt="icon">Course Management</li>
+							<li><img src="assets/images/home-one/choose-icon2.png" alt="icon">Students Progress Tracking</li>
+							<li><img src="assets/images/home-one/choose-icon3.png" alt="icon">Interactive Live Class</li>
+							<li><img src="assets/images/home-one/choose-icon4.png" alt="icon">Quiz and Assignments</li>
+						</ul>
+					</div>
+					<p class="choose-suport-des"><img src="assets/images/home-one/top-star.png" alt="star">24/7 Hrs Ready to our support team</p>
+					<div class="choose-btn">
+						<a href="choose.html">GET STARTED<i class="flaticon flaticon-right-arrow"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-6 col-lg-6">
-				<div class="sign-form-wrapper">
-					<div class="sign-form-logo">
-						<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+			<div class="col-lg-5">
+				<div class="choose-thumb">
+					<img src="assets/images/home-one/choose-thumb1.png" alt="thumb">
+					<div class="choose-skill-box">
+						<div class="choose-skill-icon">
+							<img src="assets/images/home-one/choose-rat-icon.png" alt="rat">
+						</div>
+						<div class="choose-skill-content">
+							<h3 class="counter">26</h3>
+							<span>+</span>
+							<p>Years of Experiences</p>
+						</div>
 					</div>
-					<h3 class="sign-in-title">Sign In</h3>
-					<p class="subtitle">Welcome back Wick</p>
-					<form action="https://formspree.io/f/myyleorq" method="POST">
-						<div class="form-input-box">
-							<div class="form-input-title">
-								<label for="emailAddress">Email Address <span>*</span></label>
-							</div>
-							<div class="form-input">
-								<input name="email" id="emailAddress" type="email" placeholder="Email Address">
-							</div>
-						</div>
-						<div class="form-input-box">
-							<div class="form-input-title">
-								<label for="password">Password <span>*</span></label>
-							</div>
-							<div class="form-input">
-								<input name="password" id="password" type="password" placeholder="Your Password">
-							</div>
-						</div>
-						<div class="sign-option">
-							<div class="checkout-option">
-								<input id="rememberMe" type="checkbox">
-								<label for="rememberMe">Remember me</label>
-							</div>
-							<div class="sign-forgot">
-								<a href="forgot.html" class="sign-link">Forgot Password?</a>
-							</div>
-						</div>
-						<div class="sign-btn">
-							<a href="sign-in.html">Sign In</a>
-						</div>
-					</form>
-					<div class="bd-alter-sign">
-						<button><span class="btn-icon"><i class="fa-brands fa-facebook"></i></span>Facebook</button>
-						<button><span class="btn-icon"><i class="fa-brands fa-google"></i></span>Google</button>
+					<div class="choose-shape-dot">
+						<img src="assets/images/home-one/choose-dot.png" alt="dot-shape">
 					</div>
-					<div class="bd-sign-up-label">
-						Don't have an account?<a href="sign-up.html" class="sign-link"> Sign up</a>
+					<div class="choose-shape-star">
+						<img src="assets/images/home-one/choose-star.png" alt="star-shape">
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="choose-shape1">
+			<img src="assets/images/home-one/choose-shape1.png" alt="shape">
+		</div>
+		<div class="choose-shape2">
+			<img src="assets/images/home-one/choose-circle.png" alt="shape">
+		</div>
 	</div>
-</section>
+</div>
+
 <!--==================================================-->
-<!-- End educate sign form area  -->
+<!-- Start educate why choose Area -->
 <!--==================================================-->
 
 
+
+
+
+<!--==================================================-->
+	<!--start educate reason choose area -->
+<!--==================================================-->
+<div class="reason-choose-area style-two">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="single-choose-video">
+							<div class="choose-video-icon">
+								<img src="assets/images/home-two/reason-icon1.png" alt="icon">
+							</div>
+							<div class="reason-choose-content">
+								<span class="counter-plus">+</span>
+								<h3 class="counter">600</h3>
+								<span class="counter-text">h</span>
+								<p>Popular</p>
+								<p>Courses & Video</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="reason-choose-thumb">
+							<img src="assets/images/home-two/reason-thumb1.png" alt="thumb">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="reason-choose-thumb">
+							<img src="assets/images/home-two/reason-thumb2.png" alt="thumb">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="single-choose-video student">
+							<div class="choose-video-icon">
+								<img src="assets/images/home-two/reason-icon2.png" alt="icon">
+							</div>
+							<div class="reason-choose-content">
+								<span class="counter-plus">+</span>
+								<h3 class="counter">1000</h3>
+								<span class="counter-text">h</span>
+								<p>Talentful</p>
+								<p>Certified Students</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="reason-content-box">
+					<!-- section title -->
+					<div class="section-sub-title two">
+						<h6><img src="assets/images/home-two/subtitle-icon.png" alt="icon">Reason for choose</h6>
+					</div>
+					<div class="section_title two">
+						<h1>Thriving Through</h1>
+						<h1>Growth and Knowledge</h1>
+						<h1>Community</h1>
+					</div>
+					<div class="reason-choose-item">
+						<ul>
+							<li><i class="bi bi-check-lg"></i>Flex Your Schedule</li>
+							<li><i class="bi bi-check-lg"></i>Comfort of Anywhere</li>
+							<li><i class="bi bi-check-lg"></i>Achieve More with Flexible Classes</li>
+							<li><i class="bi bi-check-lg"></i>Flex Your Schedule</li>
+						</ul>
+					</div>
+					<div class="reason-choose-btn">
+						<a href="#">GET STARTED<i class="flaticon flaticon-right-arrow"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reason-shape1">
+			<img src="assets/images/home-two/reason-shape1.png" alt="shape">
+		</div>
+		<div class="reason-shape2">
+			<img src="assets/images/home-two/reason-shape2.png" alt="shape">
+		</div>
+	</div>
+</div>
+
+
+<!--==================================================-->
+	<!--End educate reason choose area -->
+<!--==================================================-->
+
+
+
+
+<!--==================================================-->
+<!-- start educate brand Area -->
+<!--==================================================-->
+<div class="brand-area style-one inner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="section-sub-title">
+					<h6>our partners</h6>
+				</div>
+				<div class="section_title">
+					<h1>Our Trusted Partners</h1>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="brand-list owl-carousel">
+					<div class="col-lg-12">
+						<div class="single-brand-box">
+							<div class="brand-thumb">
+							   <img src="assets/images/inner-img/brand-inner1.png" alt="brand">
+							</div>
+						</div>
+					</div>				    
+					<div class="col-lg-12">
+						<div class="single-brand-box">
+							<div class="brand-thumb">
+								<img src="assets/images/inner-img/brand-inner2.png" alt="brand">
+							</div>
+						</div>
+					</div>				   
+					<div class="col-lg-12">
+						<div class="single-brand-box">
+							<div class="brand-thumb">
+								<img src="assets/images/inner-img/brand-inner3.png" alt="brand">
+							</div>
+						</div>
+					</div>				    				    			    
+				</div>
+			</div>
+		</div>
+		<div class="brand-arrow-shape">
+			<img src="assets/images/home-one/brand-arrow.png" alt="arrow">
+		</div>
+		<div class="brand-star-shape">
+			<img src="assets/images/home-one/brand-star.png" alt="star">
+		</div>
+	</div>
+</div>
+
+<!--==================================================-->
+<!-- end educate brand Area -->
+<!--==================================================-->
 
 
 
@@ -499,7 +677,7 @@
 		<div class="row subscribe align-items-center">
 			<div class="col-lg-4 col-md-12">
 				<div class="footer-logo">
-					<a href="index.html"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
+					<a href="{% url 'home' %}"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12">
@@ -518,7 +696,7 @@
 			</div>
 		</div>
 		<div class="row add-footer-class">
-			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+			<div class="col-xl-3 col-lg-3 col-md-6">
 				<div class="footer-widget-content">
 					<div class="footer-widget-title">
 						<h4>Get in Touch</h4>
@@ -538,23 +716,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+			<div class="col-xl-3 col-lg-3 col-md-6">
 				<div class="footer-widget-content">
 					<div class="footer-widget-title">
 						<h4>Online Platform</h4>
 					</div>
 					<div class="footer-widget-menu">
 						<ul>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="about.html">About Us</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course.html">Our Courses</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="instructor.html">Instructors</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="contact.html">Enroll Now</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course-details.html">Career</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'about' %}">About Us</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'courses' %}">Our Courses</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'instructors' %}">Instructors</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'contact' %}">Enroll Now</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'course-detail' %}">Career</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>			
-			<div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
+			<div class="col-xl-3 col-lg-2 col-md-6">
 				<div class="footer-widget-content">
 					<div class="footer-widget-title">
 						<h4>Quick Links</h4>
@@ -563,14 +741,14 @@
 						<ul>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="blog.html">Latest Blog</a></li>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="#">Our Galary</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="contact.html">Contact Us</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course-details.html">Privacy Policy</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'contact' %}">Contact Us</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'course-detail' %}">Privacy Policy</a></li>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="faq.html">FAQ’s</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+			<div class="col-xl-3 col-lg-4 col-md-6">
 				<div class="footer-widget-title">
 					<h4>Recent Posts</h4>
 				</div>
@@ -602,7 +780,7 @@
 			<div class="row footer-bottom">
 				<div class="col-lg-6">
 					<div class="footer-bottom-desc">
-						<p>© 2025 <a href="index.html">Educate</a>. Designed By Dream IT Solution</p>
+						<p>© 2025 <a href="{% url 'home' %}">Educate</a>. Designed By Dream IT Solution</p>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -640,38 +818,38 @@
 <!-- End educate Scroll Up-->
 <!--==================================================-->
 
-	 	<!-- modernizr js -->
-		<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- jquery js -->
-		<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
-		<script src="assets/js/popper.min.js"></script>
-		<!-- bootstrap js -->
-		<script src="assets/js/bootstrap.min.js"></script>
-		<!-- carousel js -->
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<!-- counterup js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<!-- waypoints js -->
-		<script src="assets/js/waypoints.min.js"></script>
-		<!-- wow js -->
-		<script src="assets/js/wow.js"></script>
-		<!-- imagesloaded js -->
-		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-		<!-- venobox js -->
-		<script src="venobox/venobox.js"></script>
-		<!--  animated-text js -->
-		<script src="assets/js/animated-text.js"></script>
-		<!-- venobox min js -->
-		<script src="venobox/venobox.min.js"></script>
-		<!-- isotope js -->
-		<script src="assets/js/isotope.pkgd.min.js"></script>
-		<!-- jquery meanmenu js -->
-		<script src="assets/js/jquery.meanmenu.js"></script>
-		<!-- jquery scrollup js -->
-		<script src="assets/js/jquery.scrollUp.js"></script>
-		<!-- barfiller -->
-		<script src="assets/js/jquery.barfiller.js"></script>
-		<!-- theme js -->
-		<script src="assets/js/theme.js"></script>
+ 	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<!-- jquery js -->
+	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- counterup js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- waypoints js -->
+	<script src="assets/js/waypoints.min.js"></script>
+	<!-- wow js -->
+	<script src="assets/js/wow.js"></script>
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+	<!--  animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+	<!-- isotope js -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- jquery meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.js"></script>
+	<!-- jquery scrollup js -->
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<!-- barfiller -->
+	<script src="assets/js/jquery.barfiller.js"></script>
+	<!-- theme js -->
+	<script src="assets/js/theme.js"></script>
 </body>
 </html>

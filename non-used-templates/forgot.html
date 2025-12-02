@@ -76,7 +76,7 @@
 		<div class="row header-top">
 			<div class="col-xxl-6 col-xl-8 col-lg-8">
 				<div class="header-top-welcome">
-					<p><img src="assets/images/home-one/top-star.png" alt="star">Welcome to <a href="index.html">Educate</a>– Unlocking the Power of Education!</p>
+					<p><img src="assets/images/home-one/top-star.png" alt="star">Welcome to <a href="{% url 'home' %}">Educate</a>– Unlocking the Power of Education!</p>
 				</div>
 			</div>
 			<div class="col-xxl-6 col-xl-4 col-lg-4">
@@ -102,13 +102,13 @@
 <!--==================================================-->
 <!-- Start educate Header Area-->
 <!--==================================================-->
-<div class="educate-header-area" id="sticky-header" >
+<div class="educate-header-area upper" id="sticky-header" >
 	<div class="container-fluid">
 		<div class="row header-wrap align-items-center">
 			<div class="col-lg-2">
 				<div class="header-logo">
-					<a class="active_logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-					<a class="logo_two" href="index.html"><img src="assets/images/footer-logo.png" alt="logo"></a>
+					<a class="active_logo" href="{% url 'home' %}"><img src="assets/images/logo.png" alt="logo"></a>
+					<a class="logo_two" href="{% url 'home' %}"><img src="assets/images/footer-logo.png" alt="logo"></a>
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -116,36 +116,36 @@
 					<ul class="nav_scroll">
 						<li><a href="#">Home<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="index.html">Home Version 01</a></li>
-								<li><a href="index-2.html">Home Version 02</a></li>
-								<li><a href="index-3.html">Home Version 03</a></li>
-								<li><a href="index-4.html">Home Version 04</a></li>
-								<li><a href="index-5.html">Home Version 05</a></li>
-								<li><a href="index-6.html">Home Version 06</a></li>
+								<li><a href="{% url 'home' %}">Home Version 01</a></li>
+								<li><a href="{% url 'home2' %}">Home Version 02</a></li>
+								<li><a href="{% url 'home3' %}">Home Version 03</a></li>
+								<li><a href="{% url 'home4' %}">Home Version 04</a></li>
+								<li><a href="{% url 'home5' %}">Home Version 05</a></li>
+								<li><a href="{% url 'home6' %}">Home Version 06</a></li>
 							</ul>
 						</li>
-						<li><a href="about.html">about</a></li>
+						<li><a href="{% url 'about' %}">about</a></li>
 						<li><a href="#">pages<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="course.html">Courses</a></li>
-								<li><a href="course-details.html">Courses Details</a></li>
-								<li><a href="instructor.html">Instructor</a></li>						
-								<li><a href="instructor-details.html">Instructor Details</a></li>
+								<li><a href="{% url 'about' %}">About Us</a></li>
+								<li><a href="{% url 'courses' %}">Courses</a></li>
+								<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
+								<li><a href="{% url 'instructors' %}">Instructor</a></li>						
+								<li><a href="{% url 'instructor-detail' %}">Instructor Details</a></li>
 								<li><a href="event.html">Event</a></li>	
 								<li><a href="event-details.html">Event Details</a></li>	
-								<li><a href="pricing.html">Pricing</a></li>	
+								<li><a href="{% url 'pricing' %}">Pricing</a></li>	
 								<li><a href="faq.html">Faq</a></li>	
 								<li><a href="choose.html">Why Choose</a></li>
 								<li><a href="testimonial.html">testimonial</a></li>	
 								<li><a href="404.html">Error Page</a></li>							
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
 							</ul>
 						</li>
 						<li><a href="#">courses<i class="bi bi-chevron-down"></i></a>
 							<ul class="sub_menu">
-								<li><a href="course.html">Courses</a></li>
-								<li><a href="course-details.html">Courses Details</a></li>
+								<li><a href="{% url 'courses' %}">Courses</a></li>
+								<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Shop<i class="bi bi-chevron-down"></i></a>
@@ -162,8 +162,8 @@
 								<li><a href="blog-details.html">Blog Details</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>						
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					</ul>				
 				</div>
 			</div>
 			<div class="col-lg-4">
@@ -177,7 +177,7 @@
 							<small class="cart_counter">0</small>
 						</button>
 						<div class="header-btn">
-							<a href="contact.html">Free Trial<i class="flaticon flaticon-right-arrow"></i></a>
+							<a href="{% url 'contact' %}">Free Trial<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
 						<div class="header-sidbar-button navSidebar-button">
 							<a href="#"><i class="bi bi-justify-left"></i></a>
@@ -198,43 +198,43 @@
 	<div class="mobile-menu">
 		<nav class="header-menu">
 			<div class="mobile-logo">
-				<a class="logo_img" href="index.html" title="educate">
+				<a class="logo_img" href="{% url 'home' %}" title="educate">
 				    <img src="assets/images/footer-logo.png" alt="logo">
 				</a>
 			  </div>
 			  <ul class="nav_scroll">
 				<li><a href="#">Home<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="index.html">Home Version 01</a></li>
-						<li><a href="index-2.html">Home Version 02</a></li>
-						<li><a href="index-3.html">Home Version 03</a></li>
-						<li><a href="index-4.html">Home Version 04</a></li>
-						<li><a href="index-5.html">Home Version 05</a></li>
-						<li><a href="index-6.html">Home Version 06</a></li>
+						<li><a href="{% url 'home' %}">Home Version 01</a></li>
+						<li><a href="{% url 'home2' %}">Home Version 02</a></li>
+						<li><a href="{% url 'home3' %}">Home Version 03</a></li>
+						<li><a href="{% url 'home4' %}">Home Version 04</a></li>
+						<li><a href="{% url 'home5' %}">Home Version 05</a></li>
+						<li><a href="{% url 'home6' %}">Home Version 06</a></li>
 					</ul>
 				</li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="{% url 'about' %}">about</a></li>
 				<li><a href="#">pages<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="course.html">Courses</a></li>
-						<li><a href="course-details.html">Courses Details</a></li>
-						<li><a href="instructor.html">Instructor</a></li>						
-						<li><a href="instructor-details.html">Instructor Details</a></li>
+						<li><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'courses' %}">Courses</a></li>
+						<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
+						<li><a href="{% url 'instructors' %}">Instructor</a></li>						
+						<li><a href="{% url 'instructor-detail' %}">Instructor Details</a></li>
 						<li><a href="event.html">Event</a></li>	
 						<li><a href="event-details.html">Event Details</a></li>	
-						<li><a href="pricing.html">Pricing</a></li>	
+						<li><a href="{% url 'pricing' %}">Pricing</a></li>	
 						<li><a href="faq.html">Faq</a></li>	
 						<li><a href="choose.html">Why Choose</a></li>
 						<li><a href="testimonial.html">testimonial</a></li>	
 						<li><a href="404.html">Error Page</a></li>							
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul>
 				</li>
 				<li><a href="#">courses<i class="bi bi-chevron-down"></i></a>
 					<ul class="sub_menu">
-						<li><a href="course.html">Courses</a></li>
-						<li><a href="course-details.html">Courses Details</a></li>
+						<li><a href="{% url 'courses' %}">Courses</a></li>
+						<li><a href="{% url 'course-detail' %}">Courses Details</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Shop<i class="bi bi-chevron-down"></i></a>
@@ -251,8 +251,8 @@
 						<li><a href="blog-details.html">Blog Details</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>	
+				<li><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>		
 		</nav>
 	</div>
 </div>
@@ -377,7 +377,7 @@
 				<div class="sidebar-info-contents">
 					<div class="content-inner">
 						<div class="nav-logo">
-							<a href="index.html"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
+							<a href="{% url 'home' %}"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
 						</div>
 						<div class="content-box">
 							<h2>About Us</h2>
@@ -417,353 +417,68 @@
 
 
 <!--==================================================-->
-<!-- Start educate Breadcumb Area -->
+<!-- Start educate sign in form area -->
 <!--==================================================-->
-<div class="breadcumb-area d-flex">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-12">
-				<div class="breadcumb-content">
-					<div class="breadcumb-title">
-						<h4>Checkout</h4>
-					</div>
-					<ul>
-						<li><a href="index.html">Home <span><i class="fa-solid fa-arrow-right-long"></i></span></a></li>
-						<li>Checkout</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="breadcumb-shape">
-			<img src="assets/images/inner-img/breadcumb-dot.png" alt="dot">
-		</div>
-		<div class="breadcumb-shape2">
-			<img src="assets/images/inner-img/breadcumb-ball.png" alt="ball">
-		</div>
-	</div>
-</div>
-<!--==================================================-->
-<!-- End educate Breadcumb Area -->
-<!--==================================================-->
-
-
-
-
-<!--==================================================-->
-<!-- Product Section Start checkout-->
-<!--==================================================-->
-<div class="shop-product-section">
-	<div class="container">
-		<form action="#" class="checkout-form">
-			<div class="row g-4">
-				<div class="col-lg-7">
-					<!-- Billing Address -->
-					<div id="billing-form">
-						<h4 class="mb-4">Billing Address</h4>
-						<div class="row row-cols-sm-2 row-cols-1 g-4">
-							<div class="col">
-								<label>First Name*</label>
-								<input class="form-field" type="text" placeholder="First Name" id="c-name1" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Last Name*</label>
-								<input class="form-field" type="text" placeholder="Last Name" id="c-name2" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Email Address*</label>
-								<input class="form-field" type="email" placeholder="Email Address" id="c-mail1" name="email">
-							</div>
-							<div class="col">
-								<label>Phone no*</label>
-								<input class="form-field" type="text" placeholder="Phone number" id="c-numb1" name="number" autocomplete="off">
-							</div>
-							<div class="col-sm-12">
-								<label>Company Name</label>
-								<input class="form-field" type="text" placeholder="Company Name" id="c-cname1" name="name" autocomplete="off">
-							</div>
-							<div class="col-sm-12">
-								<label>Address*</label>
-								<input class="form-field" type="text" placeholder="Address line 1" id="c-addr1" name="name" autocomplete="off">
-							</div>
-							<div class="col-sm-12">
-								<input class="form-field" type="text" placeholder="Address line 2" id="c-addr2" name="name" autocomplete="off">
-							</div>
-							<div class="col">
-								<label>Country*</label>
-								<select class="form-field">
-									<option>Bangladesh</option>
-									<option>China</option>
-									<option>country</option>
-									<option>India</option>
-									<option>Japan</option>
-								</select>
-							</div>
-							<div class="col">
-								<label>Town/City*</label>
-								<input class="form-field" type="text" placeholder="Town/City" id="c-city1" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>State*</label>
-								<input class="form-field" type="text" placeholder="State" id="c-state1" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Zip Code*</label>
-								<input class="form-field" type="text" placeholder="Zip Code" id="c-zip1" name="name" autocomplete="on">
-							</div>
-							<div class="col-sm-12 d-flex flex-wrap">
-								<div class="form-check me-4">
-									<input class="form-check-input" type="checkbox" id="create_account">
-									<label class="form-check-label" for="create_account">Create an Acount?</label>
-								</div>
-								<div class="form-check m-0">
-									<input class="form-check-input" type="checkbox" id="shiping_address" data-toggle-shipping="#shipping-form">
-									<label class="form-check-label" for="shiping_address">Ship to Different Address</label>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<!-- Shipping Address -->
-					<div id="shipping-form" class="mt-md-8 mt-6">
-						<h4 class="mb-4">Shipping Address</h4>
-						<div class="row row-cols-sm-2 row-cols-1 g-4">
-							<div class="col">
-								<label>First Name*</label>
-								<input class="form-field" type="text" placeholder="First Name" id="c-nam1" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Last Name*</label>
-								<input class="form-field" type="text" placeholder="Last Name" id="c-nam2" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Email Address*</label>
-								<input class="form-field" type="email" placeholder="Email Address" id="c-mil1" name="email" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Phone no*</label>
-								<input class="form-field" type="text" placeholder="Phone number" id="c-num1" name="number" autocomplete="off">
-							</div>
-							<div class="col-sm-12">
-								<label>Company Name</label>
-								<input class="form-field" type="text" placeholder="Company Name" id="c-comp1" name="name" autocomplete="off">
-							</div>
-							<div class="col-sm-12">
-								<label>Address*</label>
-								<input class="form-field" type="text" placeholder="Address line 1" id="c-add1" name="name" autocomplete="on">
-							</div>
-							<div class="col-sm-12">
-								<input class="form-field" type="text" placeholder="Address line 2" id="c-add2" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Country*</label>
-								<select class="form-field">
-									<option>Bangladesh</option>
-									<option>China</option>
-									<option>country</option>
-									<option>India</option>
-									<option>Japan</option>
-								</select>
-							</div>
-							<div class="col">
-								<label>Town/City*</label>
-								<input class="form-field" type="text" placeholder="Town/City" id="c-town1" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>State*</label>
-								<input class="form-field" type="text" placeholder="State" id="c-state3" name="name" autocomplete="on">
-							</div>
-							<div class="col">
-								<label>Zip Code*</label>
-								<input class="form-field" type="text" placeholder="Zip Code" id="c-zipc1" name="name" autocomplete="on">
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-5">
-
-					<!-- Checkout Summary Start -->
-					<div class="checkout-box">
-
-						<h4 class="mb-4">Cart Total</h4>
-
-						<table class="checkout-summary-table table table-borderless">
-							<thead>
-								<tr>
-									<th>Product</th>
-									<th>Total</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>pixer photo Original x 1</td>
-									<td>$110.00</td>
-								</tr>
-								<tr>
-									<td>Medium Roast Ground pixer x 1</td>
-									<td>$19.00</td>
-								</tr>
-								<tr>
-									<td class="border-top">Sub Total</td>
-									<td class="border-top">$129.00</td>
-								</tr>
-								<tr>
-									<td class="border-top">Shipping Fee</td>
-									<td class="border-top">$5.00</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<th class="border-top">Grand Total</th>
-									<th class="border-top">$139.00</th>
-								</tr>
-							</tfoot>
-						</table>
-
-					</div>
-					<!-- Checkout Summary End -->
-
-					<!-- Payment Method Start -->
-					<div class="checkout-box">
-
-						<h4 class="mb-4">Payment Method</h4>
-
-						<div class="checkout-payment-method">
-
-							<div class="single-method form-check">
-								<input class="form-check-input" type="radio" id="payment_check" name="payment-method" checked>
-								<label class="form-check-label" for="payment_check">Check Payment</label>
-								<p>Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-							</div>
-
-							<div class="single-method form-check">
-								<input class="form-check-input" type="radio" id="payment_bank" name="payment-method">
-								<label class="form-check-label" for="payment_bank">Direct Bank Transfer</label>
-								<p>Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-							</div>
-
-							<div class="single-method form-check">
-								<input class="form-check-input" type="radio" id="payment_cash" name="payment-method">
-								<label class="form-check-label" for="payment_cash">Cash on Delivery</label>
-								<p>Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-							</div>
-
-							<div class="single-method form-check">
-								<input class="form-check-input" type="radio" id="payment_card" name="payment-method">
-								<label class="form-check-label" for="payment_card">Card Payment</label>
-								<p>Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-							</div>
-
-							<div class="single-method form-check">
-								<input class="form-check-input" type="checkbox" id="accept_terms">
-								<label class="form-check-label mb-4" for="accept_terms">I’ve read and accept the terms &amp; conditions</label>
-							</div>
-
-						</div>
-
-						<button class="btn btn-dark btn-primary-hover rounded-0 mt-6">Place order</button>
-
-					</div>
-					<!-- Payment Method End -->
-
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-
-<!--==================================================-->
-<!-- Product Section End -->
-<!--==================================================-->
-
-
-
-
-<!--==================================================-->
-<!-- Start educate call to action Area style-two -->
-<!--==================================================-->
-<div class="call-to-action style-two">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-6">
-				<div class="call-to-title">
-					<h3>Your Learning Journey Begins Here</h3>
-					<h3>Explore – all programs Today</h3>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="call-to-btn">
-					<a href="contact.html">all programs<i class="flaticon flaticon-right-arrow"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="call-to-shape31">
-			<img src="assets/images/home-three/call-to-arrow2.png" alt="shape">
-		</div>
-	</div>
-</div>
-
-
-<!--==================================================-->
-<!-- end educate call to action Area style-two -->
-<!--==================================================-->
-
-
-
-
-<!--==================================================-->
-<!-- start educate brand Area -->
-<!--==================================================-->
-<div class="brand-area style-one inner">
+<section class="course-sign-form-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5">
-				<div class="section-sub-title">
-					<h6>our partners</h6>
-				</div>
-				<div class="section_title">
-					<h1>Our Trusted Partners</h1>
-				</div>
-			</div>
-			<div class="col-lg-7">
-				<div class="brand-list owl-carousel">
-					<div class="col-lg-12">
-						<div class="single-brand-box">
-							<div class="brand-thumb">
-							   <img src="assets/images/inner-img/brand-inner1.png" alt="brand">
-							</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="course-sign-in">
+					<div class="sign-form">
+						<div class="bd-section-title-wrapper">
+							<h2 class="sign-form-title">Reset Your Password</h2>
+							<p class="sign-desc">Enter your email to reset your password and regain
+								access to your account.</p>
 						</div>
-					</div>				    
-					<div class="col-lg-12">
-						<div class="single-brand-box">
-							<div class="brand-thumb">
-								<img src="assets/images/inner-img/brand-inner2.png" alt="brand">
-							</div>
-						</div>
-					</div>				   
-					<div class="col-lg-12">
-						<div class="single-brand-box">
-							<div class="brand-thumb">
-								<img src="assets/images/inner-img/brand-inner3.png" alt="brand">
-							</div>
-						</div>
-					</div>				    				    			    
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="brand-arrow-shape">
-			<img src="assets/images/home-one/brand-arrow.png" alt="arrow">
-		</div>
-		<div class="brand-star-shape">
-			<img src="assets/images/home-one/brand-star.png" alt="star">
+			<div class="col-xl-6 col-lg-6">
+				<div class="sign-form-wrapper">
+					<div class="sign-form-logo">
+						<a href="{% url 'home' %}"><img src="assets/images/logo.png" alt="logo"></a>
+					</div>
+					<h3 class="sign-in-title">Reset Password</h3>
+					<p class="subtitle">Hello user</p>
+					<form action="https://formspree.io/f/myyleorq" method="POST">
+						<div class="form-input-box">
+							<div class="form-input-title">
+								<label for="emailAddress">Email Address <span>*</span></label>
+							</div>
+							<div class="form-input">
+								<input name="email" id="emailAddress" type="email" placeholder="Email Address">
+							</div>
+						</div>
+						<div class="sign-option">
+							<div class="checkout-option">
+								<input id="rememberMe" type="checkbox">
+								<label for="rememberMe">Remember me</label>
+							</div>
+							<div class="sign-forgot">
+								<a href="forgot.html" class="sign-link">Forgot Password?</a>
+							</div>
+						</div>
+						<div class="sign-btn">
+							<a href="forgot.html">Reset Password</a>
+						</div>
+					</form>
+					<div class="bd-alter-sign">
+						<button><span class="btn-icon"><i class="fa-brands fa-facebook"></i></span>Facebook</button>
+						<button><span class="btn-icon"><i class="fa-brands fa-google"></i></span>Google</button>
+					</div>
+					<div class="bd-sign-up-label">
+						Don't have an account?<a href="sign-up.html" class="sign-link"> Sign up</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+<!--==================================================-->
+<!-- End educate sign form area  -->
+<!--==================================================-->
 
-<!--==================================================-->
-<!-- end educate brand Area -->
-<!--==================================================-->
+
 
 
 
@@ -776,7 +491,7 @@
 		<div class="row subscribe align-items-center">
 			<div class="col-lg-4 col-md-12">
 				<div class="footer-logo">
-					<a href="index.html"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
+					<a href="{% url 'home' %}"><img src="assets/images/home-one/footer-logo.png" alt="logo"></a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12">
@@ -785,7 +500,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12">
-				<form action="https://formspree.io/f/myyleorq" method="POST">
+				<form action="#">
 					<div class="subscribe-box">
 						<span><i class="fa-classic fa-regular fa-envelope fa-fw"></i></span>
 						<input type="text" name="Email" placeholder="Enter Your Email" required="">
@@ -822,11 +537,11 @@
 					</div>
 					<div class="footer-widget-menu">
 						<ul>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="about.html">About Us</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course.html">Our Courses</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="instructor.html">Instructors</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="contact.html">Enroll Now</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course-details.html">Career</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'about' %}">About Us</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'courses' %}">Our Courses</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'instructors' %}">Instructors</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'contact' %}">Enroll Now</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'course-detail' %}">Career</a></li>
 						</ul>
 					</div>
 				</div>
@@ -840,8 +555,8 @@
 						<ul>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="blog.html">Latest Blog</a></li>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="#">Our Galary</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="contact.html">Contact Us</a></li>
-							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="course-details.html">Privacy Policy</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'contact' %}">Contact Us</a></li>
+							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'course-detail' %}">Privacy Policy</a></li>
 							<li><img src="assets/images/home-one/footer-icon.png" alt="icon"><a href="faq.html">FAQ’s</a></li>
 						</ul>
 					</div>
@@ -879,7 +594,7 @@
 			<div class="row footer-bottom">
 				<div class="col-lg-6">
 					<div class="footer-bottom-desc">
-						<p>© 2025 <a href="index.html">Educate</a>. Designed By Dream IT Solution</p>
+						<p>© 2025 <a href="{% url 'home' %}">Educate</a>. Designed By Dream IT Solution</p>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -950,6 +665,5 @@
 	<script src="assets/js/jquery.barfiller.js"></script>
 	<!-- theme js -->
 	<script src="assets/js/theme.js"></script>
-
 </body>
 </html>
