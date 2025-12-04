@@ -15,4 +15,5 @@ urlpatterns = [
     path('instructor-details/', instructor_details_page, name='instructor-detail'),
     path('pricing/', pricing_page, name='pricing'),
     path('contact/', contact_page, name='contact'),
+    path('home/', home1_page, name='home1'),
 ]

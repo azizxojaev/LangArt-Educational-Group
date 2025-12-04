@@ -51,3 +51,7 @@ def pricing_page(request):
 
 def contact_page(request):
     return render(request, 'contact.html')
+
+
+def home1_page(request):
+    return render(request, 'home.html')

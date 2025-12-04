@@ -2134,7 +2134,27 @@ section.hero_area.style-four .hero-btn {
     margin-right: 25px;
 }
 
+.schools-btn {
+    display: inline-block;
+    margin-right: 25px;
+}
+
 section.hero_area.style-four .hero-btn a {
+    display:inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    color:var(--color-white);
+    font-weight: 500;
+    font-family: "Outfit";
+    border-radius: 28px;
+    background-color:var(--primary-color);
+    padding: 13px 35px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.schools-btn a {
     display:inline-block;
     font-size: 16px;
     text-transform: uppercase;
@@ -2165,8 +2185,33 @@ section.hero_area.style-four .hero-btn a::before {
     z-index: -1;
 }
 
+.schools-btn a::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background:var(--title-color);
+    border-radius: 30px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: .5s;
+    clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+    z-index: -1;
+}
+
 section.hero_area.style-four .hero-btn a:hover::before {
     clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+
+.schools-btn a:hover::before {
+    clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+
+.schools-btn a img {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 section.hero_area.style-four .hero-btn a img {
@@ -2178,7 +2223,23 @@ section.hero_area.style-four .hero-course-btn {
     display: inline-block;
 }
 
+.schools-btn2 {
+    display: inline-block;
+}
+
 section.hero_area.style-four .hero-course-btn a {
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 500;
+    font-family: "Outfit";
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.schools-btn2 a {
     display: inline-block;
     font-size: 16px;
     text-transform: uppercase;
@@ -2198,7 +2259,25 @@ section.hero_area.style-four .hero-course-btn a:hover::before{
     background: var(--primary-color);
 }
 
+.schools-btn2 a:hover{
+    color: var(--primary-color);
+}
+
+.schools-btn2 a:hover::before{
+    background: var(--primary-color);
+}
+
 section.hero_area.style-four .hero-course-btn a::before{
+    position: absolute;
+    content: '';
+    width: 125px;
+    height: 1px;
+    background-color: rgba(30,30,30,0.5019607843137255);
+    left: 0;
+    bottom: 0;
+}
+
+.schools-btn2 a::before{
     position: absolute;
     content: '';
     width: 125px;
@@ -3250,7 +3329,6 @@ section.about-area.style-one .section-sub-title h6::after {
 
 .style-one .about-thumb-wrapper {
     position: relative;
-    margin-left: -236px;
 }
 
 .style-one .about-thumb {
