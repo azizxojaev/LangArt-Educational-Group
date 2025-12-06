@@ -4,27 +4,6 @@ from django.shortcuts import render
 def home_page(request):
     return render(request, 'index.html')
 
-
-def home_page2(request):
-    return render(request, 'index-2.html')
-
-
-def home_page3(request):
-    return render(request, 'index-3.html')
-
-
-def home_page4(request):
-    return render(request, 'index-4.html')
-
-
-def home_page5(request):
-    return render(request, 'index-5.html')
-
-
-def home_page6(request):
-    return render(request, 'index-6.html')
-
-
 def about_page(request):
     return render(request, 'about.html')
 
@@ -51,7 +30,3 @@ def pricing_page(request):
 
 def contact_page(request):
     return render(request, 'contact.html')
-
-
-def home1_page(request):
-    return render(request, 'home.html')
