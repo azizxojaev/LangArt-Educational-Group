@@ -85,22 +85,22 @@
 					</div>
 					<div class="section_title">
 						<h1>Who We Are – Introduction to</h1>
-						<h1>Educate Online Platform</h1>
+						<h1>LangArt Educational Group</h1>
 					</div>
 					<div class="section-title-desc">
-						<p>Educate the ultimate destination for knowledge seekers and educators alike. 
-							We are committed to transforming special education impact global channels 
-							without standards compliant systems</p>
+						<p>LangArt Educational Group is the ultimate destination for learners committed to mastering the English language. As a premier learning center, we are dedicated to creating meaningful, real-world impact through innovative and inclusive language education. Our mission is to transform the English learning experience by offering immersive, dynamic, and learner-centered programs—free from rigid, traditional systems and tailored to the needs of today’s global community.</p>
 					</div>
 					<div class="about-iteam-list">
 						<ul>
-							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">Course Catalog & Program Information</li>
-							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">Online Application & Admission Process</li>
-							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">Financial Aid and Scholarships</li>
+							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">General English</li>
+							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">English for School</li>
+							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">Young Learners English</li>
+							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">English for Exams</li>
+							<li><img src="/assets/images/home-three/about-icon31.png" alt="icon">Business English</li>
 						</ul>
 					</div>
 					<div class="about-iteam-phone">
-						<p><span><img src="/assets/images/home-three/about-call.png" alt="call"></span>+ (680) 3290 570</p>
+						<p><span><img src="/assets/images/home-three/about-call.png" alt="call"></span>+998 (97) 877-71-77</p>
 					</div>
 					<div class="about-btn">
 						<a href="{% url 'about' %}">more about<i class="flaticon flaticon-right-arrow"></i></a>
@@ -110,11 +110,7 @@
 							<span><i class="bi bi-check-lg"></i></span>
 						</div>
 						<div class="education-content">
-							<p>Trusted Online
-								And offline Best
-								Educations
-							</p>
-							<span>John Doe</span>
+							<p>Time-Tested Quality </p>
 						</div>
 					</div>
 				</div>
@@ -146,9 +142,8 @@
 						<img src="/assets/images/home-three/feature-icon21.png" alt="feature-icon">
 					</div>
 					<div class="feature-content">
-						<h4 class="feature-title">Scholarship Facility</h4>
-						<p class="feature-desc">The ultimate destination knowledge
-							We are committed to learn</p>
+						<h4 class="feature-title" style="line-height: normal;">SmartClass Experience</h4>
+						<p class="feature-desc">A modern classroom environment featuring premium furniture, strong security, and advanced tools for enriched learning.</p>
 					</div>
 				</div>
 			</div>
@@ -158,9 +153,8 @@
 						<img src="/assets/images/home-three/feature-icon22.png" alt="feature-icon">
 					</div>
 					<div class="feature-content">
-						<h4 class="feature-title">Book & Library Store</h4>
-						<p class="feature-desc">The ultimate destination knowledge
-							We are committed to learn</p>
+						<h4 class="feature-title" style="line-height: normal;">Future-Ready Learning Materials</h4>
+						<p class="feature-desc">Cutting-edge educational resources designed to support innovative teaching, deeper comprehension, and meaningful language mastery.</p>
 					</div>
 				</div>
 			</div>
@@ -170,9 +164,8 @@
 						<img src="/assets/images/home-three/feature-icon23.png" alt="feature-icon">
 					</div>
 					<div class="feature-content">
-						<h4 class="feature-title">Easily Online Learning</h4>
-						<p class="feature-desc">The ultimate destination knowledge
-							We are committed to learn</p>
+						<h4 class="feature-title" style="line-height: normal;">Interactive Technology-Enhanced Learning</h4>
+						<p class="feature-desc">Engaging lessons blending touch screen boards and innovative technology to enrich creativity, collaboration, and learning.</p>
 					</div>
 				</div>
 			</div>
@@ -207,31 +200,14 @@
 			<div class="col-lg-6">
 				<div class="single-course-offer-box">
 					<div class="course-offer-content">
-						<h6>Designing</h6>
-						<h4>Creative Graphic Design</h4>
-						<h4>With Adobe Suite</h4>
-						<div class="offer-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="offer-rating-rate">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-offer-price">
-								<span>$35 <del>$60</del></span>
-							</div>
-						</div>
+						<h1 style="margin-bottom: 150px;">Choose a <br> suitable course</h1>
 						<div class="course-offer-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
+							<a href="{% url 'courses' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
-						<div class="course-offer-discount">
+						<!-- <div class="course-offer-discount">
 							<h5>10%</h5>
 							<span>off</span>
-						</div>
+						</div> -->
 					</div>
 					<div class="offer-thumb">
 						<img src="/assets/images/home-one/offer-thumb.png" alt="thumb">
@@ -264,7 +240,7 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="call-to-btn">
-					<a href="{% url 'contact' %}">all programs<i class="flaticon flaticon-right-arrow"></i></a>
+					<a href="{% url 'courses' %}">all programs<i class="flaticon flaticon-right-arrow"></i></a>
 				</div>
 			</div>
 		</div>
@@ -652,7 +628,7 @@
 <!--==================================================-->
 <!-- start educate brand Area -->
 <!--==================================================-->
-<div class="brand-area style-one inner">
+<!-- <div class="brand-area style-one inner">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5">
@@ -696,7 +672,7 @@
 			<img src="/assets/images/home-one/brand-star.png" alt="star">
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!--==================================================-->
 <!-- end educate brand Area -->

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Course
 
 
 def home_page(request):
@@ -9,11 +10,23 @@ def about_page(request):
 
 
 def courses_page(request):
-    return render(request, 'course.html')
+    courses = Course.objects.all()
+
+    context = {
+        'courses': courses
+    }
+
+    return render(request, 'course.html', context=context)
 
 
-def course_details_page(request):
-    return render(request, 'course-details.html')
+def course_details_page(request, slug):
+    course = Course.objects.get(slug=slug)
+
+    context = {
+        'course': course
+    }
+
+    return render(request, 'course-details.html', context=context)
 
 
 def instructors_page(request):

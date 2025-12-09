@@ -56,250 +56,53 @@
 			</div>
 		</div>
 		<div class="row">
+			{% for course in courses %}
 			<div class="col-xl-4 col-lg-6 col-md-6">
 				<div class="course-details-box">
 					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb1.png" alt="thumb">
+						<img src="{{ course.image.url }}" alt="thumb">
 						<div class="course-meta-top">
-							<span>Business</span>
+							<span>{{ course.short_tag }}</span>
 						</div>
 					</div>
 					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Business Innovation And
-							Development</a></h4>
+						<h4><a href="{% url 'course-detail' course.slug %}">{{ course.title }}</a></h4>
 						<div class="course-rating">
 							<ul>
 								<li><i class="fa-solid fa-star"></i></li>
 								<li><i class="fa-solid fa-star"></i></li>
 								<li><i class="fa-solid fa-star"></i></li>
 								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
+								<li><i class="fa-solid fa-star"></i></li>
+								<!-- <li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li> -->
 							</ul>
 							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
+								<span>(5/5 Ratings)</span>
 							</div>
 							<div class="course-price">
-								<h3>$60</h3>
+								<h3>{{ course.price }} som</h3>
 							</div>
 						</div>
 						<div class="course-details-list">
 							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 16 Lessons</span>
+								<span><i class="fa fa-calendar"></i>{{ course.duration }} Month</span>
 							</div>
 							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 1500 Students</span>
+								<span><i class="fa fa-hourglass-end"></i>{{ course.lesson_duration }} hours</span>
 							</div>
 						</div>
 						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
+							<a href="{% url 'course-detail' course.slug %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6">
-				<div class="course-details-box">
-					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb3.png" alt="thumb">
-						<div class="course-meta-top">
-							<span>Networking</span>
-						</div>
-					</div>
-					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Fundamentals of Network
-							And Domains</a></h4>
-						<div class="course-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-price">
-								<h3>Free</h3>
-							</div>
-						</div>
-						<div class="course-details-list">
-							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 10 Lessons</span>
-							</div>
-							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 190 Students</span>
-							</div>
-						</div>
-						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6">
-				<div class="course-details-box">
-					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb3.png" alt="thumb">
-						<div class="course-meta-top">
-							<span>Finance</span>
-						</div>
-					</div>
-					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Banking Management for
-							Economics Industry</a></h4>
-						<div class="course-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-price">
-								<h3>$80 <del>$100</del></h3>
-							</div>
-						</div>
-						<div class="course-details-list">
-							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 20 Lessons</span>
-							</div>
-							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 890 Students</span>
-							</div>
-						</div>
-						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6">
-				<div class="course-details-box">
-					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb4.png" alt="thumb">
-						<div class="course-meta-top">
-							<span>Designing</span>
-						</div>
-					</div>
-					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Creative Graphic Design 
-							with Adobe Suite</a></h4>
-						<div class="course-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-price">
-								<h3>$90</h3>
-							</div>
-						</div>
-						<div class="course-details-list">
-							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 16 Lessons</span>
-							</div>
-							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 1000 Students</span>
-							</div>
-						</div>
-						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6">
-				<div class="course-details-box">
-					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb5.png" alt="thumb">
-						<div class="course-meta-top">
-							<span>Coding</span>
-						</div>
-					</div>
-					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Web & Mobile Application
-							Developments</a></h4>
-						<div class="course-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-price">
-								<h3>$70 <del>$90</del></h3>
-							</div>
-						</div>
-						<div class="course-details-list">
-							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 12 Lessons</span>
-							</div>
-							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 200 Students</span>
-							</div>
-						</div>
-						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6">
-				<div class="course-details-box">
-					<div class="course-details-thumb">
-						<img src="/assets/images/inner-img/course-thumb6.png" alt="thumb">
-						<div class="course-meta-top">
-							<span>Business</span>
-						</div>
-					</div>
-					<div class="course-details-content">
-						<h4><a href="{% url 'course-detail' %}">Business Innovation And
-							Development</a></h4>
-						<div class="course-rating">
-							<ul>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-solid fa-star"></i></li>
-								<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-							</ul>
-							<div class="course-rating-num">
-								<span>(4.5/3 Ratings)</span>
-							</div>
-							<div class="course-price">
-								<h3>$55</h3>
-							</div>
-						</div>
-						<div class="course-details-list">
-							<div class="course-lesson">
-								<span><i class="fa-regular fa-file-lines"></i> 16 Lessons</span>
-							</div>
-							<div class="course-student">
-								<span><i class="fa-regular fa-user"></i> 1500 Students</span>
-							</div>
-						</div>
-						<div class="course-btn">
-							<a href="{% url 'course-detail' %}">Enroll Now<i class="flaticon flaticon-right-arrow"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
 <!--==================================================-->
 	<!--End educate-details-course-area -->
 <!--==================================================-->
+
 {% endblock %}
