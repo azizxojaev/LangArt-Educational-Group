@@ -11,6 +11,13 @@ class Course(models.Model):
     price = models.IntegerField()
     duration = models.IntegerField()
     lesson_duration = models.IntegerField()
+    course_overview = models.TextField()
+    what_you_will_learn = models.JSONField(default=list)
+    how_much_5stars = models.IntegerField()
+    how_much_4stars = models.IntegerField()
+    how_much_3stars = models.IntegerField()
+    how_much_2stars = models.IntegerField()
+    how_much_1stars = models.IntegerField()
 
     class Meta:
         verbose_name = "Курс"
@@ -22,5 +29,18 @@ class Course(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Course, self).save(*args, **kwargs)
+
+
+class Contact(models.Model):
+    phone_number = models.CharField(max_length=20)
+    email = models.EmailField(max_length=20)
+    locations = models.JSONField(default=list)
+
+    class Meta:
+        verbose_name = "Контакты"
+        verbose_name_plural = "Контакты"
+    
+    def __str__(self):
+        return "Контакты"
 
 

@@ -11927,7 +11927,7 @@ section.contact_area.style-six .contact-form button:hover{
     border: 1px solid rgba(30,30,30,0.1);
     margin-bottom: 25px;
     position: relative;
-    height: 600px;
+    height: fit-content;
     border-radius: 20px;
     padding: 20px 20px 32px;
     transition: 0.5s;
@@ -12172,7 +12172,7 @@ section.event-details-area.style-inner {
     font-weight: 400;
 }
 
-.style-inner p.description-2 {
+.style-inner p.description {
     padding: 23px 0 40px;
 }
 

@@ -69,7 +69,7 @@
 						</div>
 						<div class="call_info">
 							<p>Call us Anytime</p>
-							<h3>+123 - (4567) - 890</h3>
+							<h3>{{ contact.phone_number }}</h3>
 						</div>
 					</div>
 					<div class="call-do-action-info">
@@ -78,7 +78,7 @@
 						</div>
 						<div class="call_info">
 							<p>Call us Anytime</p>
-							<h3>example@gmail.com</h3>
+							<h3>{{ contact.email }}</h3>
 						</div>
 					</div>
 					<div class="call-do-action-info">
@@ -87,7 +87,9 @@
 						</div>
 						<div class="call_info">
 							<p>Our Locations</p>
-							<span>102/B Soltek New Elephant Road <br>California, USA</span>
+							{% for l in contact.locations %}
+							<span>{{ l }}</span>
+							{% endfor %}
 						</div>
 					</div>
 				</div>

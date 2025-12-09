@@ -32,36 +32,25 @@
 			<div class="col-xl-6 col-lg-8">
 				<div class="row breadcumb-autor">
 					<div class="col-lg-4 col-md-4">
-						<div class="breadcumb-autor-box">
-							<div class="breadcumb-autor">
-								<img src="/assets/images/inner-img/breadcumb-autor.png" alt="autor">
-							</div>
-							<div class="breadcumb-autor-content">
-								<h5>John D. Alexon</h5>
-								<p>Instractor</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
 						<div class="breadcumb-category">
 							<span>Course Category</span>
-							<h6>Business</h6>
+							<h6>{{ course.short_tag }}</h6>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-4">
 						<div class="breadcumb-ratting">
-							<div class="reviews"><span>3 Ratings</span></div>
+							<div class="reviews"><span>16 Ratings</span></div>
 							<div class="breadcumb-star">
 								<ul>
 									<li><i class="fa-solid fa-star"></i></li>
 									<li><i class="fa-solid fa-star"></i></li>
 									<li><i class="fa-solid fa-star"></i></li>
 									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
 								</ul>
 							</div>
 							<div class="breadcumb-ratting-num">
-								<span>(4.5)</span>
+								<span>(5)</span>
 							</div>
 						</div>
 					</div>
@@ -94,185 +83,16 @@
 						<h2 class="course-details-title">Course Overview</h2>
 					</div>
 					<div class="course-details-content">
-						<p class="description">Educate the ultimate destination for knowledge seekers and educators alike distinctively restore installed
-							We are committed to transforming special education impact global channels base information with user
-							without standards compliant systems base information with</p>
-						<p class="description-2">Quickly deploy performance based architectures vis-a-vis business bandwidth. Professionally disseminate 
-							best-of-breed customer service and virtual catalysts for change. Proactively visualize professional paradigms 
-							for robust imperatives. Seamlessly matrix robust infrastructures for premium innovation</p>
+						<p class="description">{{ course.course_overview }}</p>
 					</div>
 					<div class="course-details-content">
 						<h3 class="course-details-content-title">What you’ll Learn?</h3>
 						<div class="course-post-details-list">
 							<ul>
-								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">Covering essential topics like entrepreneurship, marketing</li>
-								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">Regular live sessions with industry professionals for real-time learning.</li>
-								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">Interactive tests to reinforce knowledge and track progress.</li>
-								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">Learning from successful business models and failures.</li>
-								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">A recognized certificate to boost credibility.</li>
+								{% for w in course.what_you_will_learn %}
+								<li><img src="/assets/images/inner-img/learn-icon.png" alt="icon">{{ w }}</li>
+								{% endfor %}
 							</ul>
-							<div class="course-details-list-desc">
-								<p>Educate the ultimate destination for knowledge seekers and educators alike distinctively restore installed
-									We are committed to transforming special education impact global</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Start Accordion -->
-				<div class="accordion-title">
-					<h2>Course Curriculum</h2>
-				</div>
-				<div class="tab_container">
-					<div id="tab1" class="tab_content">
-						<ul class="accordion">
-							<li>
-								<a><span> What is the Best Extension for Marketing?</span><i class="bi bi-chevron-right"></i></a>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Introduction to Business Innovation</span>
-									<span class="duration">01:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Types of innovation (product, process, business model, etc.)</span>
-									<span class="duration">02:30:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Case studies of successful business innovations</span>
-									<span class="duration">03:40:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Brainstorming and ideation techniques</span>
-									<span class="duration">04:20:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Conducting market analysis and trend</span>
-									<span class="duration">05:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-							</li>
-							<li>
-								<a><span>Market Research & Identifying</span><i class="bi bi-chevron-right"></i></a>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Introduction to Business Innovation</span>
-									<span class="duration">01:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Types of innovation (product, process, business model, etc.)</span>
-									<span class="duration">02:30:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Case studies of successful business innovations</span>
-									<span class="duration">03:40:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Brainstorming and ideation techniques</span>
-									<span class="duration">04:20:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Conducting market analysis and trend</span>
-									<span class="duration">05:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-							</li>
-							<li>
-								<a><span> Business Model Innovation</span><i class="bi bi-chevron-right"></i></a>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Introduction to Business Innovation</span>
-									<span class="duration">01:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Types of innovation (product, process, business model, etc.)</span>
-									<span class="duration">02:30:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Case studies of successful business innovations</span>
-									<span class="duration">03:40:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Brainstorming and ideation techniques</span>
-									<span class="duration">04:20:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Conducting market analysis and trend</span>
-									<span class="duration">05:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-							</li>
-							<li>
-								<a><span>Digital Transformation & Emerging</span><i class="bi bi-chevron-right"></i></a>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Introduction to Business Innovation</span>
-									<span class="duration">01:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Types of innovation (product, process, business model, etc.)</span>
-									<span class="duration">02:30:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Case studies of successful business innovations</span>
-									<span class="duration">03:40:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Brainstorming and ideation techniques</span>
-									<span class="duration">04:20:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Conducting market analysis and trend</span>
-									<span class="duration">05:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-							</li>
-							<li>
-								<a><span>Funding & Scaling Innovation</span><i class="bi bi-chevron-right"></i></a>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Introduction to Business Innovation</span>
-									<span class="duration">01:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Types of innovation (product, process, business model, etc.)</span>
-									<span class="duration">02:30:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Case studies of successful business innovations</span>
-									<span class="duration">03:40:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Brainstorming and ideation techniques</span>
-									<span class="duration">04:20:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-								<p>
-									<span class="title"><i class="fa-solid fa-circle-play"></i>Conducting market analysis and trend</span>
-									<span class="duration">05:00:12<i class="fa-regular fa-eye"></i></span>
-								</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- End Accordion -->
-				<div class="course-details-instructors">
-					<div class="course-instructors-content">
-						<div class="instructors-thumb">
-							<a href="#"><img src="/assets/images/inner-img/instructor-details-thumb.png" alt="Instructor image"></a>
-						</div>
-						<div class="course-instructors-info">
-							<div class="instructors-info">
-								<span class="instructor">Instructor</span>
-								<h3 class="name">Anjelina Watson</h3>
-							</div>
-							<div class="course-instructors-rating">
-								<ul>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-classic fa-solid fa-star-half-stroke fa-fw"></i></li>
-									<li class="instructor-rate">(4.5)</li>
-								</ul>
-							</div>
-							<h5 class="designation">UI/UX Designer</h5>
-							<div class="instructor-dtls-social">
-								<ul class="social-icon-list">
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -280,18 +100,25 @@
 					<div class="col-xl-5 col-lg-12">
 						<div class="instructor-ratting-box">
 							<div class="ins-rating-box-number">
-								<h4>5.00</h4>
+								<h4>{{ stars_rating }}</h4>
 							</div>
 							<div class="ins-rating-box-icon">
 								<ul>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
+									{% for _ in full_stars %}
+										<li><i class="fa-solid fa-star"></i></li>
+									{% endfor %}
+
+									{% if half_star %}
+										<li><i class="fa-solid fa-star-half-stroke fa-fw"></i></li>
+									{% endif %}
+
+									{% for _ in empty_stars %}
+										<li><i class="fa-regular fa-star"></i></li>
+									{% endfor %}
 								</ul>
+
 							</div>
-							<p class="rating-box-desc">(Total 16 Ratings)</p>
+							<p class="rating-box-desc">(Total {{ total_stars }} Ratings)</p>
 						</div>
 					</div>
 
@@ -301,44 +128,44 @@
 							<!-- prossess bar -->
 							<div class="prossess-ber-plugin">
 								<span class="prosses-bar"><i class="fa-solid fa-star"></i>5 Star</span>
-								<p class="bd-review-number">(05)</p> 
+								<p class="bd-review-number">({{ course.how_much_5stars }})</p> 
 								<div id="bar1" class="barfiller">
 									<div class="tipWrap">
-										<span class="tip">90</span>
+										<span class="tip">{{ stars_percent.5 }}</span>
 									</div>
-									<span class="fill" data-percentage="90"></span>
+									<span class="fill" data-percentage="{{ stars_percent.5 }}"></span>
 								</div> 
 								<span class="prosses-bar"><i class="fa-solid fa-star"></i>4 Star</span>
-								<p class="bd-review-number">(04)</p> 
+								<p class="bd-review-number">({{ course.how_much_4stars }})</p> 
 								<div id="bar2" class="barfiller">
 									<div class="tipWrap">
-										<span class="tip">80</span>
+										<span class="tip">{{ stars_percent.4 }}</span>
 									</div>
-									<span class="fill" data-percentage="80"></span>
+									<span class="fill" data-percentage="{{ stars_percent.4 }}"></span>
 								</div>	
 								<span class="prosses-bar"><i class="fa-solid fa-star"></i>3 Star</span>
-								<p class="bd-review-number">(03)</p> 
+								<p class="bd-review-number">({{ course.how_much_3stars }})</p> 
 								<div id="bar3" class="barfiller">
 									<div class="tipWrap">
-										<span class="tip">60</span>
+										<span class="tip">{{ stars_percent.3 }}</span>
 									</div>
-									<span class="fill" data-percentage="60"></span>
+									<span class="fill" data-percentage="{{ stars_percent.3 }}"></span>
 								</div>	
 								<span class="prosses-bar"><i class="fa-solid fa-star"></i>2 Star</span>
-								<p class="bd-review-number">(02)</p> 
+								<p class="bd-review-number">({{ course.how_much_2stars }})</p> 
 								<div id="bar4" class="barfiller">
 									<div class="tipWrap">
-										<span class="tip">50</span>
+										<span class="tip">{{ stars_percent.2 }}</span>
 									</div>
-									<span class="fill" data-percentage="50"></span>
+									<span class="fill" data-percentage="{{ stars_percent.2 }}"></span>
 								</div>	
 								<span class="prosses-bar"><i class="fa-solid fa-star"></i>1 Star</span>
-								<p class="bd-review-number">(01)</p> 
+								<p class="bd-review-number">({{ course.how_much_1stars }})</p> 
 								<div id="bar5" class="barfiller">
 									<div class="tipWrap">
-										<span class="tip">40</span>
+										<span class="tip">{{ stars_percent.1 }}</span>
 									</div>
-									<span class="fill" data-percentage="40"></span>
+									<span class="fill" data-percentage="{{ stars_percent.1 }}"></span>
 								</div>			
 							</div>
 						</div>
@@ -409,9 +236,6 @@
 					<div class="event-sidebar">
 						<div class="event-sidebar-thumb">
 							<img src="/assets/images/inner-img/course-thumb1.png" alt="thumb">
-							<div class="course-video-icon">
-								<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://www.youtube.com/watch?v=Wx48y_fOfiY"><i class="fa-classic fa-solid fa-play fa-fw"></i></a>
-							</div>
 						</div>
 						<div class="event-info">
 							<div class="event-info-title">
@@ -424,25 +248,19 @@
 									<div class="label">
 										<i class="fa-solid fa-dollar-sign"></i>Price
 									</div>
-									<span class="value-dollar">$60</span>
+									<span class="value-dollar">{{ course.price }} som</span>
 								</li>
 								<li>
 									<div class="label">
-										<i class="fa-solid fa-user"></i>Instructor
+										<i class="fa fa-calendar"></i> Course Duration
 									</div>
-									<span class="value">John D. Alexon</span>
+									<span class="value">{{ course.duration }} Months</span>
 								</li>
 								<li>
 									<div class="label">
-										<i class="fa-solid fa-book"></i> Lessons
+										<i class="fa fa-hourglass-end"></i> Lessons Duration
 									</div>
-									<span class="value">10 Lessons</span>
-								</li>
-								<li>
-									<div class="label">
-										<i class="fa-regular fa-circle-user"></i> Enrolled
-									</div>
-									<span class="value">120 Students</span>
+									<span class="value">{{ course.lesson_duration }}</span>
 								</li>
 								<li>
 									<div class="label">
@@ -454,12 +272,12 @@
 									<div class="label">
 										<i class="fa-solid fa-globe"></i>Language
 									</div>
-									<span class="value">English (US)</span>
+									<span class="value">English, Russian, Uzbek</span>
 								</li>
 							</ul>
 						</div>
 						<div class="event-info-btn">
-							<a href="{% url 'courses' %}">BOOK NOW<i class="flaticon flaticon-right-arrow"></i></a>
+							<a href="{% url 'contact' %}">BOOK NOW<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
 						<div class="course-share-title">
 							<h5>Share Now</h5>
@@ -491,7 +309,7 @@
 <!--==================================================-->
 <!-- Start educate-details-course-area style-inner -->
 <!--==================================================-->
-<div class="educate-details-course-area style-inner details">
+<!-- <div class="educate-details-course-area style-inner details">
 	<div class="container">
 		<div class="row align-items-center section-title-space">
 			<div class="col-lg-12">
@@ -623,7 +441,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!--==================================================-->
 	<!--End educate-details-course-area -->
 <!--==================================================-->
