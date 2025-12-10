@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from .utils import calculate_stars
 
 
 def home_page(request):
@@ -20,24 +21,14 @@ def courses_page(request):
 
 
 def course_details_page(request, slug):
+    # Get course object
     course = Course.objects.get(slug=slug)
 
-    total_stars = course.how_much_5stars + course.how_much_4stars + course.how_much_3stars + course.how_much_2stars + course.how_much_1stars
-    stars_percent = {
-        5: round(course.how_much_5stars / total_stars * 100),
-        4: round(course.how_much_4stars / total_stars * 100),
-        3: round(course.how_much_3stars / total_stars * 100),
-        2: round(course.how_much_2stars / total_stars * 100),
-        1: round(course.how_much_1stars / total_stars * 100)
-    }
-    stars_rating = round(((course.how_much_5stars*5) + (course.how_much_4stars*4) + (course.how_much_3stars*3) + (course.how_much_2stars*2) + (course.how_much_1stars*1)) / total_stars, 1)
-    full_stars = int(round(stars_rating))
-    if stars_rating >= full_stars:
-        half_star = 1 if (stars_rating - full_stars) <= 0.5 else 0
-    else:
-        half_star = 1 if (full_stars - stars_rating) >= 0.5 else 0
+    # Get stars data
+    stars_percent, stars_rating, total_stars, full_stars, half_star, empty_stars = calculate_stars(course)
 
-    empty_stars = 5 - full_stars - half_star
+    # Get reviews
+    reviews = course.reviews.all()
 
     context = {
         'course': course,
@@ -47,17 +38,30 @@ def course_details_page(request, slug):
         'full_stars': range(full_stars),
         'half_star': half_star,
         'empty_stars': range(empty_stars),
+        'reviews': reviews
     }
 
     return render(request, 'course-details.html', context=context)
 
 
 def instructors_page(request):
-    return render(request, 'instructor.html')
+    teachers = Teacher.objects.all()
+
+    context = {
+        'teachers': teachers
+    }
+
+    return render(request, 'instructor.html', context=context)
 
 
-def instructor_details_page(request):
-    return render(request, 'instructor-details.html')
+def instructor_details_page(request, slug):
+    teacher = Teacher.objects.get(slug=slug)
+
+    context = {
+        'teacher': teacher
+    }
+
+    return render(request, 'instructor-details.html', context=context)
 
 
 def pricing_page(request):

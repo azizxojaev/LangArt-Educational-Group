@@ -9,6 +9,7 @@
 
 
 {% block content %}
+{% load review_tags %}
 <!--==================================================-->
 <!-- Start educate Breadcumb Area -->
 <!--==================================================-->
@@ -23,7 +24,7 @@
 					<ul>
 						<li><a href="{% url 'home' %}">Home <span><i class="fa-solid fa-arrow-right-long"></i></span></a></li>
 						<li><a href="{% url 'courses' %}">course<span><i class="fa-solid fa-arrow-right-long"></i></span></a></li>
-						<li>Business innovation and development</li>
+						<li>{{ course.title }}</li>
 					</ul>
 				</div>
 			</div>
@@ -42,15 +43,21 @@
 							<div class="reviews"><span>16 Ratings</span></div>
 							<div class="breadcumb-star">
 								<ul>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
-									<li><i class="fa-solid fa-star"></i></li>
+									{% for _ in full_stars %}
+										<li><i class="fa-solid fa-star"></i></li>
+									{% endfor %}
+
+									{% if half_star %}
+										<li><i class="fa-solid fa-star-half-stroke fa-fw"></i></li>
+									{% endif %}
+
+									{% for _ in empty_stars %}
+										<li><i class="fa-regular fa-star"></i></li>
+									{% endfor %}
 								</ul>
 							</div>
 							<div class="breadcumb-ratting-num">
-								<span>(5)</span>
+								<span>({{ stars_rating }})</span>
 							</div>
 						</div>
 					</div>
@@ -174,58 +181,37 @@
 						<h3 class="course-details-content-title">Student’s Reviews</h3>
 						<div class="reviews-postbox-comment">
 							<ul>
+								{% for r in reviews %}
 								<li class="post-comment-box-1">
 									<div class="reviews-postbox-comment-box">
 										<div class="reviews-postbox-comment-text">
 											<div class="reviews-postbox-comment-info">
 												<div class="reviews-postbox-comment-autor">
-													<img src="/assets/images/inner-img/review-autor1.png" alt="image">
+													<img src="{{ r.user_image.url }}" alt="image">
 												</div>
 											</div>
 											<div class="reviews-postbox-comment-name">
-												<a href="#">John D. Alexon</a>
+												<a>{{ r.name}}</a>
 												<div class="post-rating">
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a class="post-time" href="#">6 min ago</a>
+													{# Полные звезды #}
+													{% for _ in r.rating|times %}
+														<a><i class="fa fa-star"></i></a>
+													{% endfor %}
+
+													{# Пустые звезды #}
+													{% for _ in r.rating|remaining_stars %}
+														<a><i class="fa-regular fa-star"></i></a>
+													{% endfor %}
+													<a class="post-time">{{ r.created_at|timesince }} ago</a>
 												</div>
 											</div>
 										</div>
 										<div class="reviews-desc">
-											<p>Educate the ultimate destination for knowledge seekers and educators alike distinctively restore
-												We are committed to transforming special education</p>
+											<p>{{ r.review }}</p>
 										</div>
 									</div>
 								</li>
-								<li class="post-comment-box-2">
-									<div class="reviews-postbox-comment-box">
-										<div class="reviews-postbox-comment-text">
-											<div class="reviews-postbox-comment-info">
-												<div class="reviews-postbox-comment-autor">
-													<img src="/assets/images/inner-img/review-autor2.png" alt="image">
-												</div>
-											</div>
-											<div class="reviews-postbox-comment-name">
-												<a href="#">Anjelina Watson</a>
-												<div class="post-rating">
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a href="#"><i class="fa fa-star"></i></a>
-													<a class="post-time" href="#">6 min ago</a>
-												</div>
-											</div>
-										</div>
-										<div class="reviews-desc">
-											<p>Dramatically implement just in time e-commerce via timely architectures. Objectively formulate 
-												bleeding-edge quality vectors and cost effective growth </p>
-										</div>
-									</div>
-								</li>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>
@@ -235,7 +221,7 @@
 				<div class="event-sidebar-wrapper">
 					<div class="event-sidebar">
 						<div class="event-sidebar-thumb">
-							<img src="/assets/images/inner-img/course-thumb1.png" alt="thumb">
+							<img src="{{ course.image.url }}" alt="thumb">
 						</div>
 						<div class="event-info">
 							<div class="event-info-title">
@@ -284,10 +270,8 @@
 						</div>
 						<div class="course-share-icon">
 							<ul class="share-icon">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+								<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a target="_blank" href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text=Check this course!"><i class="fab fa-telegram"></i></a></li>
 							</ul>
 						</div>
 					</div>
