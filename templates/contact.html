@@ -56,7 +56,7 @@
 				</div>
 				<div class="section_title">
 					<h1>Trusted By the Genious</h1>
-					<h1>People with EducateX</h1>
+					<h1>People with LangArt</h1>
 				</div>
 				<div class="section-title-desc">
 					<p>Media leadership skills before cross-media innovation main technology
@@ -102,26 +102,47 @@
 						<h4>CONTACT US</h4>
 						<h1>Feel Free to Contact Us</h1>
 					</div>
-					<form action="https://formspree.io/f/myyleorq" method="POST">
+					<form action="{% url 'contact' %}" method="POST">
+						{% csrf_token %}
 						<div class="row">
 							<div class="col-lg-6 col-md-6">
 								<div class="form-box">
-									<input type="text" name="name" placeholder="Your Name *">
+									<input type="text" name="name" required placeholder="Your Name *">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6">
 								<div class="form-box">
-									<input type="text" name="name" placeholder="Phone No">
+									<input type="tel" name="phone" required placeholder="Phone No">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6">
 								<div class="form-box">
-									<input type="email" name="name" placeholder="Enter E-Mail *">
+									<input type="email" name="email" placeholder="Enter E-Mail *">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6">
 								<div class="form-box">
-									<input type="text" name="name" placeholder="Select Subjects *">
+									<select required name="courses">
+										<option value="" disabled selected>Select Course</option>
+										{% for c in courses %}
+										<option value="{{ c.title }}">{{ c.title }}</option>
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-6">
+								<div class="form-box">
+									<select required name="levels" style="margin-bottom: 10px;">
+										<option value="" disabled selected>Select Level</option>
+										<option value="Starter">Starter</option>
+										<option value="A1">A1</option>
+										<option value="A2">A2</option>
+										<option value="B1">B1</option>
+										<option value="B2">B2</option>
+										<option value="C1">C1</option>
+										<option value="C2">C2</option>
+									</select>
+									<label><a href="#">Take a placement test</a></label>
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12">
@@ -130,7 +151,7 @@
 								</div>
 							</div>
 							<div class="checkbox">
-								<input type="checkbox" id="vehicle1" name="vehicle1" value="agree">
+								<input required type="checkbox" id="vehicle1" name="vehicle1" value="agree">
 								<label for="vehicle1">Agree with Terms and Conditions</label>
 							</div>
 							<div class="contact-form">

@@ -1,4 +1,11 @@
 import math
+from environs import Env
+import requests
+
+
+env = Env()
+env.read_env()
+
 
 def custom_round(x):
     if x > int(x) + 0.5:
@@ -25,3 +32,15 @@ def calculate_stars(course):
     empty_stars = 5 - full_stars - half_star
 
     return stars_percent, stars_rating, total_stars, full_stars, half_star, empty_stars
+
+
+def send_message(text):
+    api_token = env.str('API_TOKEN')
+    chat_id = env.str('CHAT_ID')
+    api_url = f'https://api.telegram.org/bot{api_token}/sendMessage'
+
+    try:
+        response = requests.post(api_url, json={'chat_id': chat_id, 'text': text})
+        response.raise_for_status()
+    except Exception as e:
+        print(f'Произошла ошибка: {e}')

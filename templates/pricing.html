@@ -61,14 +61,15 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="pricing-toggle">
-					<span style="margin: 0.8em;">Monthly</span>
+					<span style="margin: 0.8em;">12 Lessons</span>
 					<label class="switch">
 						<input type="checkbox" id="pricing-toggle-checkbox">
 						<span class="slider"></span>
 					</label>
-					<span style="margin: 0.8em;">Yealry</span>
+					<span style="margin: 0.8em;">1 Lesson</span>
 				</div>
 			</div>
+			{% for c in courses %}
 			<div class="col-lg-4 col-md-6">
 				<div class="single-pricing-box">
 					<div class="pricing-head">
@@ -76,92 +77,49 @@
 							<img src="/assets/images/inner-img/pricing-icon1.png" alt="icon">
 						</div>
 						<div class="pricing-head-content">
-							<h1>Starter Plan</h1>
-							<p>Indivisual</p>
+							<h1>{{ c.title }}</h1>
+							<p>{{ c.ages }} years</p>
 						</div>
 					</div>
 					<div class="pricing-body">
 						<div class="pricing-list">
 							<ul>
-								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">Unlimited Websites</li>
-								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">10+ Paid Plugin</li>
-								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">Woocommerce Support</li>
-								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">50+ WP theme</li>
-								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">Free Equipments</li>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.lesson_duration }} minutes</li>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.breaks }} minutes breaks</li>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.certificates }}</li>
 							</ul>
-						</div>
-						<div class="pricing-rate">
-							<h2  class="price price-monthly"><span class="dollar">$</span> 39 <span class="month">/Monthly</span></h2>
-							<h2  class="price price-yearly"><span class="dollar">$</span> 49 <span class="month">/yearly</span></h2>
-						</div>
-					</div>
-					<div class="pricing-button">
-						<a href="{% url 'pricing' %}">Purchase now<i class="flaticon flaticon-right-arrow"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-pricing-box box-2">
-					<div class="pricing-head">
-						<div class="pricing-icon">
-							<img src="/assets/images/inner-img/pricing-icon2.png" alt="icon">
-						</div>
-						<div class="pricing-head-content">
-							<h1>Professional</h1>
-							<p>Indivisual</p>
-						</div>
-					</div>
-					<div class="pricing-body">
-						<div class="pricing-list">
+							<p>Standart:</p>
 							<ul>
-								<li><img src="/assets/images/inner-img/price-icon2.png" alt="icon">Unlimited Websites</li>
-								<li><img src="/assets/images/inner-img/price-icon2.png" alt="icon">10+ Paid Plugin</li>
-								<li><img src="/assets/images/inner-img/price-icon2.png" alt="icon">Woocommerce Support</li>
-								<li><img src="/assets/images/inner-img/price-icon2.png" alt="icon">50+ WP theme</li>
-								<li><img src="/assets/images/inner-img/price-icon2.png" alt="icon">Free Equipments</li>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.students_in_group }} students</li>
 							</ul>
-						</div>
-						<div class="pricing-rate">
-							<h2  class="price price-monthly"><span class="dollar">$</span> 59 <span class="month">/Monthly</span></h2>
-							<h2  class="price price-yearly"><span class="dollar">$</span> 69 <span class="month">/yearly</span></h2>
-						</div>
-					</div>
-					<div class="pricing-button">
-						<a href="{% url 'pricing' %}">Purchase now<i class="flaticon flaticon-right-arrow"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-pricing-box box-3">
-					<div class="pricing-head">
-						<div class="pricing-icon">
-							<img src="/assets/images/inner-img/pricing-icon3.png" alt="icon">
-						</div>
-						<div class="pricing-head-content">
-							<h1>Business Plan</h1>
-							<p>Indivisual</p>
-						</div>
-					</div>
-					<div class="pricing-body">
-						<div class="pricing-list">
+							<div class="pricing-rate">
+								<h2  class="price price-monthly"><span class="dollar">UZS</span> {{ c.price }} <span class="month">/12 Lessons</span></h2>
+								<h2  class="price price-yearly"><span class="dollar">UZS</span> {{ c.daily_price }} <span class="month">/1 Lesson</span></h2>
+							</div>
+							<p>Focused:</p>
 							<ul>
-								<li><img src="/assets/images/inner-img/price-icon3.png" alt="icon">Unlimited Websites</li>
-								<li><img src="/assets/images/inner-img/price-icon3.png" alt="icon">10+ Paid Plugin</li>
-								<li><img src="/assets/images/inner-img/price-icon3.png" alt="icon">Woocommerce Support</li>
-								<li><img src="/assets/images/inner-img/price-icon3.png" alt="icon">50+ WP theme</li>
-								<li><img src="/assets/images/inner-img/price-icon3.png" alt="icon">Free Equipments</li>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.students_in_group2 }} students</li>
 							</ul>
+							<div class="pricing-rate">
+								<h2  class="price price-monthly"><span class="dollar">UZS</span> {{ c.price2 }} <span class="month">/12 Lessons</span></h2>
+								<h2  class="price price-yearly"><span class="dollar">UZS</span> {{ c.daily_price2 }} <span class="month">/1 Lesson</span></h2>
+							</div>
+							<p>Duo:</p>
+							<ul>
+								<li><img src="/assets/images/inner-img/price-icon1.png" alt="icon">{{ c.students_in_group3 }} students</li>
+							</ul>
+							<div class="pricing-rate">
+								<h2  class="price price-monthly"><span class="dollar">UZS</span> {{ c.price3 }} <span class="month">/12 Lessons</span></h2>
+								<h2  class="price price-yearly"><span class="dollar">UZS</span> {{ c.daily_price3 }} <span class="month">/1 Lesson</span></h2>
+							</div>
 						</div>
-						<div class="pricing-rate">
-							<h2  class="price price-monthly"><span class="dollar">$</span> 99 <span class="month">/Monthly</span></h2>
-							<h2  class="price price-yearly"><span class="dollar">$</span> 89 <span class="month">/yearly</span></h2>
+						<div class="pricing-button">
+							<a href="{% url 'contact' %}">Purchase now<i class="flaticon flaticon-right-arrow"></i></a>
 						</div>
-					</div>
-					<div class="pricing-button">
-						<a href="{% url 'pricing' %}">Purchase now<i class="flaticon flaticon-right-arrow"></i></a>
 					</div>
 				</div>
 			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
@@ -175,23 +133,43 @@
 	toggleCheckbox.addEventListener('change', function() {
 		if (this.checked) {
 			// Monthly
-			priceMonthly[0].style.display = "none";
-			priceMonthly[1].style.display = "none";
-			priceMonthly[2].style.display = "none";
+			priceMonthly.forEach(function(i) {
+				i.style.display = "none"
+			})
 			// yerarly
-			priceYearly[0].style.display= "block"
-			priceYearly[1].style.display= "block"
-			priceYearly[2].style.display= "block"
+			priceYearly.forEach(function(i) {
+				i.style.display = "block"
+			})
 		} else {
 			// Monthly
-			priceMonthly[0].style.display = "block";
-			priceMonthly[1].style.display = "block";
-			priceMonthly[2].style.display = "block";
-			// Yearly
-			priceYearly[0].style.display= "none"
-			priceYearly[1].style.display= "none"
-			priceYearly[2].style.display= "none"
+			priceMonthly.forEach(function(i) {
+				i.style.display = "block"
+			})
+			// yerarly
+			priceYearly.forEach(function(i) {
+				i.style.display = "none"
+			})
 		}
 	});
+</script>
+
+<script>
+	let courses = document.querySelectorAll(".single-pricing-box")
+	let style = 0
+	let index
+	
+	for (let t = 0; t < courses.length; t++) {
+		style++
+		if (style > 3) {
+			style = 1
+		}
+		courses[t].classList.add(`box-${style}`)
+
+		console.log(courses[t].querySelectorAll('img'))
+		courses[t].querySelectorAll('img').forEach(function(i) {
+			index = i.currentSrc.length - 5
+			i.src = i.currentSrc.slice(0, index) + style + i.currentSrc.slice(index+1)
+		})
+	}
 </script>
 {% endblock %}

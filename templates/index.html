@@ -380,6 +380,7 @@
 
 	let header_logo = document.querySelector(".active_logo")
 	let header_logo2 = document.querySelector(".logo_two")
+	header_logo.children[0].src = header_logo2.children[0].src
 	header_logo.classList.remove("active_logo")
 	header_logo2.classList.remove("logo_two")
 	header_logo.classList.add("logo_two")

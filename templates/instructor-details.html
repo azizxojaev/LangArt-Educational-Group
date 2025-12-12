@@ -61,9 +61,8 @@
 						<h3 class="instructor-name">{{ teacher.name }}</h3>
 						<div class="instructor-course-info">
 							<ul>
-								<li class="total-course"><a href="#"><i class="fa-regular fa-bookmark"></i>
-									12 Courses</a></li>
-								<li><a href="#"><i class="fa-regular fa-user"></i>160 Students</a>
+								<li class="total-course"><a><i class="fa fa-calendar"></i>{{ teacher.experience }} Years of experience</a></li>
+								<li><a><i class="fa-regular fa-user"></i>{{ teacher.students }} Students</a>
 								</li>
 							</ul>
 						</div>
@@ -74,12 +73,9 @@
 				<div class="instruction-details-box">
 					<div class="instructor-details-content">
 						<h3 class="instructor-details-title">About Me</h3>
-						<p class="instructor-details-desc">Hello I’am Anjelina Watson destination for knowledge seekers and
-							We are committed to transforming special education impact global
-							without standards compliant
-						</p>
+						<p class="instructor-details-desc">{{ teacher.about }}</p>
 					</div>
-					<div class="instructor-info-list">
+					<!-- <div class="instructor-info-list">
 						<ul>
 							<li><a href="#"><i class="fa-regular fa-envelope"></i>
 								example@gmail.com</a></li>
@@ -88,7 +84,7 @@
 							<li><a href="#"><i class="fa-solid fa-location-dot"></i>102/B main road, California-USA</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

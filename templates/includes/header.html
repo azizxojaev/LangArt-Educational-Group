@@ -6,7 +6,7 @@
 		<div class="row header-top">
 			<div class="col-xxl-6 col-xl-8 col-lg-8">
 				<div class="header-top-welcome">
-					<p><img src="/assets/images/home-one/top-star.png" alt="star">Welcome to <a href="{% url 'home' %}">Educate</a>– Unlocking the Power of Education!</p>
+					<p><img src="/assets/images/home-one/top-star.png" alt="star">Welcome to <a href="{% url 'home' %}">LangArt</a>– Unlocking the Power of Education!</p>
 				</div>
 			</div>
 			<!-- <div class="col-xxl-6 col-xl-4 col-lg-4">
@@ -44,7 +44,7 @@
 			<div class="col-lg-6">
 				<div class="header-menu">
 					<ul class="nav_scroll">
-						<li><a href="{% url 'about' %}">about</a></li>
+						<li><a href="{% url 'about' %}">About</a></li>
 						<li><a href="{% url 'courses' %}">Courses</a></li>
 						<li><a href="{% url 'instructors' %}">Instructors</a></li>
 						<li><a href="{% url 'pricing' %}">Pricing</a></li>	
@@ -55,9 +55,9 @@
 			<div class="col-lg-4">
 				<div class="header-right-wrapper">
 					<div class="header-sidebar">
-						<div class="header-src-btn">
+						<!-- <div class="header-src-btn">
 							<div class="search-box-btn search-box-outer"><i class="fa-solid fa-magnifying-glass"></i></div>
-						</div>
+						</div> -->
 						<div class="header-sidbar-button navSidebar-button">
 							<a href="#"><i class="bi bi-justify-left"></i></a>
 						</div>
@@ -118,28 +118,23 @@
 						</div>
 						<div class="content-box">
 							<h2>About Us</h2>
-							<p class="text">The argument in favor of using filler text goes something like this: If
-								you use real content in the Consulting Process, anytime you reach a review point
-								you’ll end up reviewing and negotiating the content itself and not the design.</p>
-							<a href="index" class="theme-btn btn-style-two"><span>Consultation</span> <i class="fas fa-heart"></i></a>
+							<p class="text">LangArt Educational Group is the ultimate destination for learners committed to mastering the English language. As a premier learning center, we are dedicated to creating meaningful, real-world impact through innovative and inclusive language education. Our mission is to transform the English learning experience by offering immersive, dynamic, and learner-centered programs—free from rigid, traditional systems and tailored to the needs of today’s global community.</p>
 						</div>
 						<div class="contact-info">
 							<h2>Contact Info</h2>
 							<ul class="list-style-one">
-								<li><span class="icon flaticon-email"></span>Chicago 12, Melborne City, USA</li>
-								<li><span> <i class="bi bi-telephone-inbound"></i> </span>(+001) 123-456-7890</li>
-								<li><span><i class="bi bi-geo-alt"></i></span>Example @gmail.com</li>
-								<li><span><i class="bi bi-clock"></i></span>Week Days: 09.00 to 18.00 Sunday: Closed
-								</li>
+								<li><span class="icon flaticon-email"></span>{{ contact.email }}</li>
+								<li><span> <i class="bi bi-telephone-inbound"></i> </span>{{ contact.phone_number }}</li>
+								<li><span><i class="bi bi-geo-alt"></i></span>{{ contact.locations.0 }}</li>
+								<li><span><i class="bi bi-clock"></i></span>09.00 to 18.00</li>
 							</ul>
 						</div>
 						<!-- Social Box -->
 						<ul class="social-box">
-							<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
-							<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
-							<li class="linkedin"><a href="#" class="fa-brands fa-x-twitter"></a></li>
-							<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
-							<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
+							<li class="facebook"><a target="_blank" href="https://www.facebook.com/share/17njmqGe3R/?mibextid=wwXIfr" class="fab fa-facebook-f"></a></li>
+							<li class="twitter"><a target="_blank" href="https://www.instagram.com/langart_edu_gr?igsh=MTYzNGJzYmM3Zm90Yw%3D%3D&utm_source=qr" class="fab fa-instagram"></a></li>
+							<li class="twitter"><a target="_blank" href="https://t.me/LangArt_Educational_Group" class="fab fa-telegram"></a></li>
+							<!-- <li class="youtube"><a target="_blank" href="#" class="fab fa-linkedin-in"></a></li> -->
 						</ul>
 					</div>
 				</div>

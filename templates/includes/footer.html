@@ -9,20 +9,6 @@
 					<a href="{% url 'home' %}"><img src="/assets/images/home-one/footer-logo.png" alt="logo"></a>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-12">
-				<div class="footer-subcribe-title">
-					<h3>SUBSCRIB <span>NEWSLETTER</span></h3>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-12">
-				<form action="https://formspree.io/f/myyleorq" method="POST">
-					<div class="subscribe-box">
-						<span><i class="fa-classic fa-regular fa-envelope fa-fw"></i></span>
-						<input type="text" name="Email" placeholder="Enter Your Email" required="">
-						<button type="submit"><span><i class="fa-classic fa-solid fa-location-arrow fa-fw"></i></span></button>
-					</div>
-				</form>
-			</div>
 		</div>
 		<div class="row add-footer-class">
 			<div class="col-xl-3 col-lg-3 col-md-6">
@@ -37,10 +23,10 @@
 					</div>
 					<div class="footer-contact-info">
 						<div class="footer-contact-phone">
-							<p><img src="/assets/images/home-one/footer-call.png" alt="call">+123 (4567) 890</p>
+							<p><img src="/assets/images/home-one/footer-call.png" alt="call">{{ contact.phone_number }}</p>
 						</div>
 						<div class="footer-contact-address">
-							<span><i class="fa-classic fa-regular fa-envelope fa-fw"></i>example@gmail.com</span>
+							<span><i class="fa-classic fa-regular fa-envelope fa-fw"></i>{{ contact.email }}</span>
 						</div>
 					</div>
 				</div>
@@ -68,6 +54,7 @@
 					<div class="footer-widget-menu">
 						<ul>
 							<li><img src="/assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'contact' %}">Contact Us</a></li>
+							<li><img src="/assets/images/home-one/footer-icon.png" alt="icon"><a href="{% url 'pricing' %}">Pricing</a></li>
 							<!-- <li><img src="/assets/images/home-one/footer-icon.png" alt="icon"><a href="">Privacy Policy</a></li> -->
 						</ul>
 					</div>
@@ -80,16 +67,16 @@
 			<div class="row footer-bottom">
 				<div class="col-lg-6">
 					<div class="footer-bottom-desc">
-						<p>© 2025 <a href="{% url 'home' %}">Educate</a>. Designed By Dream IT Solution</p>
+						<p>© 2025 <a href="{% url 'home' %}">LangArt</a>.</p>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="footer-bottom-social-icon">
 						<ul>
-							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-							<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+							<li><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<!-- <li><a target="_blank" href="https://www.facebook.com/share/17njmqGe3R/?mibextid=wwXIfr"><i class="fab fa-linkedin-in"></i></a></li> -->
+							<li><a target="_blank" href="https://www.instagram.com/langart_edu_gr?igsh=MTYzNGJzYmM3Zm90Yw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+							<li><a target="_blank" href="https://t.me/LangArt_Educational_Group"><i class="fab fa-telegram"></i></a></li>
 						</ul>
 					</div>
 				</div>

@@ -8,7 +8,7 @@ class Course(models.Model):
     title = models.CharField(max_length=100)
     short_tag = models.CharField(max_length=20)
     image = models.ImageField(upload_to="courses/")
-    price = models.IntegerField()
+    price = models.PositiveIntegerField()
     duration = models.IntegerField()
     lesson_duration = models.IntegerField()
     course_overview = models.TextField()
@@ -18,6 +18,17 @@ class Course(models.Model):
     how_much_3stars = models.IntegerField()
     how_much_2stars = models.IntegerField()
     how_much_1stars = models.IntegerField()
+    breaks = models.CharField(max_length=20)
+    daily_price = models.PositiveIntegerField()
+    price2 = models.PositiveIntegerField()
+    daily_price2 = models.PositiveIntegerField()
+    price3 = models.PositiveIntegerField()
+    daily_price3 = models.PositiveIntegerField()
+    certificates = models.CharField(max_length=50)
+    students_in_group = models.CharField()
+    students_in_group2 = models.CharField()
+    students_in_group3 = models.CharField()
+    ages = models.CharField(max_length=21)
 
     class Meta:
         verbose_name = "Курс"
