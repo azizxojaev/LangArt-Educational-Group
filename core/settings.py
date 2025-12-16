@@ -31,7 +31,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = ['langart.uz', 'www.langart.uz']
+ALLOWED_HOSTS = ['langart.uz', 'www.langart.uz', '127.0.0.1']
 
 
 # Application definition
